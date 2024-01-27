@@ -1383,15 +1383,14 @@ textarea::-webkit-scrollbar-thumb{
 
 /* The footer is fixed to the bottom of the page */
 
+
 footer {
     position: fixed;
     bottom: 0;
 }
 
 @media (max-height:800px) {
-    footer {
-        position: static;
-    }
+   
     header {
         padding-top: 40px;
     }
@@ -1572,4 +1571,5 @@ footer {
 		text-align: center;
 	}
 }
+
 
