@@ -9,10 +9,16 @@
 }
 
 :root{
+    /* --primary-color-light: #aebfe1; */
+    --secondary-color-light: #250821;
+    /* --primary-color-dark: #473535; */
+    --secondary-color-dark: #4e4f52;
+    --primary-color: #ea1515;
+    --secondary-color:#212121;
     --text-color: #f5f5f5;
     --hover-color: #f70202;
     --bg-color: #000000;
-    --secon-big-color : #000000;
+    --secon-big-color : #250821;
     --big-font: 2.5rem;
     --neon-box-shadow: 0 0 .5rem #12f7ff;
     --h2-font: 3rem;
@@ -27,10 +33,33 @@
     
 }
 
+::-webkit-scrollbar{
+    height: 0;
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--secon-big-color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--hover-color);
+    border-radius: 50rem;
+}
+
+
+
+
+
 body{
     font-family: "Poppins",sans-serif;
-    background-color: var(--bg-color);
+    background-color: var(--secondary-color);
     color: var(--text-color);
+    --primary-color: var(--primary-color-light);
+    --secondary-color: var(--secondary-color-light);
+}
+body.dark-theme {
+    --primary-color: var(--primary-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+    --secon-big-color : var(--primary-color-dark);
 }
 section {
     height: 100%;
@@ -145,6 +174,13 @@ section{
     }
 
 } */
+
+
+
+
+
+
+
 .navlist {
     display: flex;
     justify-content: space-between; /* Adjust as needed */
@@ -218,16 +254,129 @@ section {
         flex-direction: column; /* Arrange nav items in a column */
         text-align: center; /* Center-align the nav items */
     }
-    #menu-icon{
-        display: flex;
-    }
+  
 
     #menu-icon:checked + .navlist {
         display: flex; /* Show navlist when the menu icon is checked */
     }
 }
 
+ /* HAMBURGER MENU */
 
+ #hamburger-nav {
+    display: none;
+  }
+ 
+  .hamburger-menu {
+    position: relative;
+    color: rgb(75, 150, 194);
+    display: inline-block;
+  }
+ 
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 22px;
+    width: 28px;
+    cursor: pointer;
+  }
+ 
+  .hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: block; /* Ensures the span behaves as a block element */
+  }
+ 
+  .menu-links {
+
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--secon-big-color);
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+  }
+ 
+  .menu-links a {
+    justify-content:right;
+    display: block;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgb(239, 240, 233);
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+    
+  }
+ 
+  .menu-links li {
+    list-style: none;
+  }
+ 
+  .menu-links.open {
+    max-height: 350px;
+  }
+ 
+  .hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+  }
+ 
+  .hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+ 
+  .hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+  }
+ 
+  .hamburger-icon span:first-child {
+    transform: none;
+  }
+ 
+  .hamburger-icon span:nth-child(2) {
+    opacity: 1;
+  }
+ 
+  .hamburger-icon span:last-child {
+    transform: none;
+  }
+
+  @media(min-width: 768px){
+    .hamburger-menu {
+        display: none;
+      }
+     
+	}
+
+/* theme */
+#icon
+{
+    width: 30px;
+    cursor: pointer;
+}
+/* nav ul
+{
+    flex: 1;
+    text-align: right;
+} */
+ 
+/* :root{
+    --primary-color: #edf2fc;
+    --secondary-color:#212121;
+}
+
+.dark-theme{
+    --primary-color: #edf2fc;
+    --secondary-color:#212121;
+}
+ */
 
 .home-content {
     max-width: 600px;
@@ -353,7 +502,7 @@ section {
 
 /* Add color to the buttons */
 .btn-color-1 {
-    background: rgb(255, 0, 0); /* Red color, you can change this */
+    background: rgb(195, 32, 32); /* Red color, you can change this */
 }
 
 .btn-color-2 {
@@ -372,6 +521,25 @@ section {
     cursor: pointer;
     height: 2rem;
   }
+
+/* Email section  */
+.mailto {
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: white;
+    width: 150px;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+.mailto a {
+    font-size: 1rem;
+    font-weight: 80;
+    color: grey;
+    font-family: "Unna", serif;
+    font-style: normal;
+}
+
 
 
 
@@ -1659,3 +1827,111 @@ footer {
 }
 
 
+
+/* //// */
+
+
+/* portfolio section */
+.fillter-buttons {
+    margin: 2rem;
+    text-align: center;
+
+   
+}
+
+.fillter-buttons .btn {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    margin-left: 1.3rem;
+    color: var(--text-color);
+}
+
+.fillter-buttons .btn:hover{
+    color: var(--hover-color);
+}
+
+.portfolio-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
+    gap: 2rem;
+}
+
+.port-box{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #292e33;
+    display: flex;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    border: 2px solid var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+}
+
+.port-imge{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.port-imge img{
+    width: 100%;
+    opacity: .5s;
+    height: 100%;
+    transition: .5s;
+}
+
+.port-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(rgba(0,0,0,.2),#12f7ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.5s;
+    padding: 0 2rem;
+}
+
+.port-box:hover .port-content{
+    opacity: 1;
+}
+
+.port-box:hover .port-imge img{
+    transform: scale(1.1);
+}
+
+.port-content h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.port-content p{
+    font-size: .8rem;
+    margin: 5px 0 15px 0;
+}
+
+.port-content a{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width:50px;
+    height: 50px;
+    border: 1px solid var(--hover-color);
+    outline: 2px solid #fff;
+
+}

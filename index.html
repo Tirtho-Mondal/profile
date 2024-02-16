@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tirtho Mondal</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
 </head>
 <body>
     <!--header site-->
@@ -23,6 +23,29 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div id="menu-icon" ><img src="img/menu.png" alt="" height="50" weight="50"></div>
+
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+
+
+            <div class="menu-links">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#timeline" onclick="toggleMenu()">Timeline</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+        <div>
+            <img src="img/moon.png" id ="icon">
+        </div>
+
     </header>
 
 
@@ -42,17 +65,29 @@
             </h3>
             </div>
 
-        <p>Rose is a flower so beautiful that it has invoked inspiration in several artists and poets. 
-            Children are familiar with the rose and other such flowers right from toddlerhood when they took strolls in the garden, 
-            to the time they started enjoying picture books, to learning the alphabet ‘R’ for rose. The flower may have been a part of their home décor,
-             or a gift they gave someone on an occasion</p>
+        <p>I am an enthusiastic, self-motivated, reliable, responsible and hard working person. I am a
+            mature team worker and adaptable to all challenging situations. I am able to work well both in a
+            team environment as well as using own initiative. I am able to work well under pressure and
+            adhere to strict deadlines. 
+            </p>
 
+<!-- 
+            <div class="mailto">
+                <a href="mailto:mondal2007117@stud.kuet.ac.bd@example.com"
+                  >Send Email</a>
+              </div> -->
 
              <div class="info-box">
-                <div class="email-box">
+
+                <div class="mailto">
+                    <a href="mailto:mondal2007117@stud.kuet.ac.bd">Send Email</a>
+                </div>
+                
+
+                <!-- <div class="email-box">
                     <h5>Email: </h5>
                     <span>tirthomondal.2001@gmail.com</span>
-                </div>
+                </div> -->
                 <!-- <div class="behance-info">
                     <h5>Behence: </h5>
                     <span>mondal2007117@stu.ac.bd</span>
@@ -60,33 +95,19 @@
              </div>
              <div class="center-container">
                 <div class="btn__container">
-                    <button class="btn btn-color-2" onclick="window.open('./assets/CV_Kazi Saeed Alam (Short).pdf')">Download CV</button>
+                    <button class="btn btn-color-2" onclick="window.open('./img/cv tirtho.pdf')">Download CV</button>
                     <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
                 </div>
             </div>
            
 
              <div id="socials-container">
-                <!-- <img src="/img/img/facebook.jpeg" 
-                alt="My facebook Profile"
-                class="icon"
-                onclick="window.open('https://linkedin.com/in/saeedutsha')"
-                />
-                <img src="/img/img/youtube.jpeg" 
-                alt="My Youtube Profile"
-                class="icon"
-                onclick="window.open('https://github.com/saeedutsha')"
-                />
-                <img src="/img/img/twitter.jpg" 
-                alt="My Twitter Profile"
-                class="icon"
-                onclick="window.open('https://scholar.google.com/citations?user=mBL3_A8AAAAJ&hl=en')"
-                /> -->
+             
                 <table>
                     <th> <img src="img/img/facebook.jpeg" 
                         alt="My facebook Profile"
                         class="icon"
-                        onclick="window.open('https://linkedin.com/in/saeedutsha')"
+                        onclick="window.open('https://www.facebook.com/tirtho117?mibextid=ZbWKwL ')"
                         />
                     </th>
                     <th></th><th></th>
@@ -153,7 +174,7 @@
     <!-- about section -->
     <section id="about" class="about">
         <div class="img-about">
-            <img src="img/img/main3.png" width="400" height="600" alt="">
+            <img src="img/img/main4.png" width="400" height="600" alt="">
         </div>
         <div class="about-content">
            
@@ -175,29 +196,6 @@
 
     </section>
 
-    <!-- Timeline section -->
-<!-- 
-    <section id="timeline" class="timeline">
-        <div class="my-timeline">
-            <p>Explore me</p>
-        </div>
-        <ul class="timeline-ul">
-            <div class="timestamp">
-                <h3 class="time-head">Khulna University of Engineering & Techenology</h2>
-                    <div><p>Currently studing in Computer Science and Engineering</p></div>
-            </div>
-            <div class=" time">
-                <h3 class="time-head">Kapimuni Shachari Vidyamandir</h2>
-                    <div><p>Completed my Secondary School Certificate in 2018 </p></div>
-            </div>
-            <div class=" time">
-                <h3 class="time-head">Kapimuni College</h2>
-                    <div><p>Completed my Higher Secondary Certificate in 2020</p></div>
-            </div>
-    
-        </ul>
-
-    </section> -->
     <section id="timeline" class="timeline">
         <div class="my-timeline">
             <p ><h1 align="center">Explore me</h1></p>
@@ -274,6 +272,12 @@
         </main>
     </div>
 </section>
+
+//
+<section>
+    
+</section>
+
 
 
 <!-- project section -->
@@ -641,11 +645,77 @@
 
 
 </section>
-<!-- <footer><p align="center">Copyright &#169; 2024 Tirtho Mondal. All Rights Reserved.
-</p>
-<div></div></footer> -->
 
-<!-- footer -->
+<section id="portfolio" class="portfolio">
+   
+    <div class="main-text">
+        <p align="center">Explore My Projects</p>
+    </div>
+    <div calss ="container">
+        <div class="fillter-buttons">
+            <button class="btn" data-filter="all">All</button>
+            <button class="btn" data-filter=".c">C</button>
+            <button class="btn" data-filter=".cpp">C++</button>
+            <button class="btn" data-filter=".java">Java</button>
+        </div>
+        <div class="portfolio-gallery">
+            <div class="port-box mix c">
+                <div class="port-imge">
+                    <img src="img/call.jpeg" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>MobiCash</h3>
+                    <p>
+                        MobiCash is a mobile banking system that provides various banking operations such as cash in, cash out, mobile recharge, send money, check balance, and transaction details.
+                    </p>
+                    <a href="#"><img src="img/img/preview.png" height="38" width="38" alt=""></a>
+                </div>
+            </div>
+            
+                <div class="port-box mix java">
+                    <div class="port-imge">
+                        <img src="img/java.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>MobiCash</h3>
+                        <p>
+                            MobiCash is a mobile banking system that provides various banking operations such as cash in, cash out, mobile recharge, send money, check balance, and transaction details.
+                        </p>
+                        <a href="#"><img src="img/img/preview.png" height="38" width="38" alt=""></a>
+                    </div>
+                </div>
+                    <div class="port-box mix c">
+                        <div class="port-imge">
+                            <img src="img/call.jpeg" alt="">
+                        </div>
+                        <div class="port-content">
+                            <h3>MobiCash</h3>
+                            <p>
+                                MobiCash is a mobile banking system that provides various banking operations such as cash in, cash out, mobile recharge, send money, check balance, and transaction details.
+                            </p>
+                            <a href="#"><img src="img/img/preview.png" height="38" width="38" alt=""></a>
+                        </div>
+                    </div>
+                        <div class="port-box mix java">
+                            <div class="port-imge">
+                                <img src="img/email.png" alt="">
+                            </div>
+                            <div class="port-content">
+                                <h3>MobiCash</h3>
+                                <p>
+                                    MobiCash is a mobile banking system that provides various banking operations such as cash in, cash out, mobile recharge, send money, check balance, and transaction details.
+                                </p>
+                                <a href="#"><img src="img/img/preview.png" height="38" width="38" alt=""></a>
+                            </div>
+                        </div>
+            <!-- More portfolio items with similar structure -->
+        </div>
+    </div>
+</section>
+
+
+
+
 
 <footer class="footer-distributed">
 
@@ -752,5 +822,6 @@
 
 
     <script src="script.js"></script>
+    <script src="mixitup.min.js"></script>
 </body>
 </html>
